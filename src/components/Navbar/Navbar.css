@@ -21,7 +21,7 @@ body {
 
 .title {
     margin-right: auto;
-    margin-left: 40px;
+    margin-left: 185px;
     color: rgb(38, 60, 104);
     font-size: x-large;
     font-weight: bolder;
@@ -29,10 +29,11 @@ body {
 
 .title a {
     text-decoration: none;
+    color: rgb(137, 187, 254);
 }
 
 .title a:hover {
-    color: rgb(137, 187, 254);
+    color: rgb(38, 60, 104);
 }
 
 .nav-button {
@@ -60,7 +61,7 @@ body {
 }
 
 li {
-    margin-left: 50px; /* Add spacing between menu items */
+    margin-left: 120px; /* Add spacing between menu items */
     margin-right: auto;
 }
 

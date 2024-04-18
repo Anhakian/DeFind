@@ -1,0 +1,24 @@
+.about-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    color: rgb(38, 60, 104);
+}
+
+.a-title {
+    margin-top: 115px;
+}
+
+.q1 {
+    margin-top: 25px;
+    margin-left: 250px;
+    color: rgb(38, 60, 104);
+}
+
+.describe1 {
+    margin-inline-start: 280px;
+    margin-inline-end: 220px;
+    font-weight: 500;
+    color: rgb(38, 60, 104);
+}
