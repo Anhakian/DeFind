@@ -10,15 +10,36 @@
     margin-top: 115px;
 }
 
-.q1 {
+.q {
     margin-top: 25px;
-    margin-left: 250px;
+    margin-left: 270px;
     color: rgb(38, 60, 104);
 }
 
-.describe1 {
-    margin-inline-start: 280px;
-    margin-inline-end: 220px;
+.describe {
+    margin-inline-start: 320px;
+    margin-inline-end: 225px;
+    font-weight: 500;
+    color: rgb(38, 60, 104);
+}
+
+.steps {
+    margin-inline-start: 320px;
+    margin-inline-end: 305px;
+    font-weight: 500;
+    color: rgb(38, 60, 104);
+}
+
+.describe-step {
+    margin-inline-start: 390px;
+    margin-inline-end: 345px;
+    font-weight: 500;
+    color: rgb(38, 60, 104);
+}
+
+.step2-describe {
+    margin-inline-start: 420px;
+    margin-inline-end: 290px;
     font-weight: 500;
     color: rgb(38, 60, 104);
 }
