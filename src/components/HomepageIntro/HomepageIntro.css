@@ -1,0 +1,18 @@
+.homepage-intro {
+    display: flex;
+    flex-direction: row;
+}
+
+.homepage-title {
+    flex: 1;
+    margin-top: 195px;
+    align-items: center;
+    margin-left: 200px;
+}
+
+.homepage-image {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

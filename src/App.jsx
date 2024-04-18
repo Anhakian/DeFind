@@ -1,5 +1,7 @@
 import Navbar from './components/Navbar/Navbar'
+import HomepageIntro from './components/HomepageIntro/HomepageIntro'
 import './App.css'
+
 
 const App = () => {
 
@@ -7,7 +9,7 @@ const App = () => {
     <>
       <div className='App'>
           <Navbar />
-          
+          <HomepageIntro />
       </div>
     </>
   )

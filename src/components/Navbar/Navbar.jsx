@@ -4,7 +4,7 @@ const Navbar = () => {
         <nav className="navbar">
             <div>
                 <ul className='all-nav-button'>
-                    <li className='title'><a href=''><h1>DeFind</h1></a></li>
+                    <li className='title'><a href=''><h1><strong>DeFind</strong></h1></a></li>
                     <ul className='nav-button'>
                         <li><a href=''>Home</a></li>
                         <li><a href=''>About</a></li>
