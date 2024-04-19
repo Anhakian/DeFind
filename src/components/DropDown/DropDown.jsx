@@ -1,9 +1,10 @@
 import Dropdown from 'react-bootstrap/Dropdown';
+import "./DropDown.css"
 
 const DropDown = ({ buttonText, items = [] }) => {
   return (
     <Dropdown>
-      <Dropdown.Toggle variant="primary" id="dropdown-basic">
+      <Dropdown.Toggle id="dropdown-basic" size="lg" className="dropdown-custom-1">
         {buttonText}
       </Dropdown.Toggle>
 

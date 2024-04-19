@@ -21,7 +21,7 @@ body {
 
 .title {
     margin-right: auto;
-    margin-left: 185px;
+    margin-left: 130px;
     color: rgb(38, 60, 104);
     font-size: x-large;
     font-weight: bolder;
@@ -61,7 +61,7 @@ body {
 }
 
 li {
-    margin-left: 120px; /* Add spacing between menu items */
+    margin-left: 160px; /* Add spacing between menu items */
     margin-right: auto;
 }
 
