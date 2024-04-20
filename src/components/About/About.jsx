@@ -16,13 +16,13 @@ const About = () => {
                 </p>
 
                 <h3 className="q"><strong>How to contribute to DeFind?</strong></h3>
-                <p className="describe"> You can contribute to DeFind by referencing accessibility elements across the DePauw University campus.
+                <p className="describe"> You can contribute to DeFind by referencing accessibility elements across the university campus.
                     The size and usefulness of our database rely on your active participation. 
                     The more features you reference, the more comprehensive and valuable our application becomes in aiding campus accessibility.
                 </p>
                     <h5 className="steps"><strong>Step to Contribute:</strong></h5>
-                    <p className="describe-step">1. Visit the Contribute to DeFind Section on the Navigation Bar</p>
-                    <p className="describe-step">2. Submit the New Accessibility Information Form</p>
+                    <p className="describe-step">1. Visit the <b>Contribute to DeFind</b> Section on the Navigation Bar</p>
+                    <p className="describe-step">2. Submit the <b>New Accessibility Information Form</b> </p>
                         <p className="step2-describe">Fill out the form with detailed descriptions of the new accessibility elements you've discovered. Include information 
                             such as the type of feature (e.g., elevator, automatic door) and any relevant details about the surrounding area.
                             Your contributions help make DeFind a more inclusive and informative resource for all users.</p>
