@@ -1,0 +1,14 @@
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(38, 60, 104);
+}
+
+.form-title {
+    margin-top: 115px;
+}
+
+.detailed-form {
+    margin-top: 40px;
+}
