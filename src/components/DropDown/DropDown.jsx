@@ -1,4 +1,5 @@
 import Dropdown from 'react-bootstrap/Dropdown';
+import { Link } from 'react-router-dom';
 import "./DropDown.css"
 
 const DropDown = ({ buttonText, items = [] }) => {
@@ -10,9 +11,7 @@ const DropDown = ({ buttonText, items = [] }) => {
 
       <Dropdown.Menu>
         {items.map((item, index) => (
-          <Dropdown.Item key={index} href={item.href}>
-            {item.text}
-          </Dropdown.Item>
+          <Link to={`/map/${item.value}`} key={index} className="dropdown-item">{item.text}</Link>
         ))}
       </Dropdown.Menu>
     </Dropdown>

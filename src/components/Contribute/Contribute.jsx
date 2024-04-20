@@ -7,14 +7,14 @@ const Contribute = () => {
     const button1 = "Academic Buildings";
       const button2 = "Non-academic Buildings"
       const academic = [
-        { text: 'Roy O. West Library', href: '' },
-        { text: 'Julian', href: '' },
-        { text: 'GCPA', href: '' } ];
+        { text: 'Roy O. West Library', value: 'Roy' },
+        { text: 'Julian', value: 'Julian' },
+        { text: 'GCPA', value: 'GCPA' } ];
   
       const non_academic = [
-        { text: 'Lucy Rowland Hall', href: '' },
-        { text: 'Hoover Dining Hall', href: '' },
-        { text: 'Mason Hall', href: '' }
+        { text: 'Lucy Rowland Hall', value: 'Lucy' },
+        { text: 'Hoover Dining Hall', value: 'Hoover' },
+        { text: 'Mason Hall', value: 'Mason' }
       ];
 
     return (
