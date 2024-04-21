@@ -24,10 +24,10 @@ const Contribute = () => {
                 </div>
                 <div className="dropdown-container2">
                         <div className="drop-down-btn3">
-                            <DropDown buttonText={button1} items={academic}/> 
+                            <DropDown buttonText={button1} items={academic} baseUrl="contribute"/> 
                         </div>
                         <div className="drop-down-btn4">
-                            <DropDown buttonText={button2} items={non_academic}/>
+                            <DropDown buttonText={button2} items={non_academic} baseUrl="contribute"/>
                         </div>
                     </div>
             
