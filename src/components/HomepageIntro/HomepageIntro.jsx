@@ -23,10 +23,10 @@ const HomepageIntro = () => {
                 <p><h2>Find the accessibility options<br /> you need</h2></p>
                 <div className="dropdown-container">
                     <div className="drop-down-btn1">
-                        <DropDown buttonText={button1} items={academic}/> 
+                        <DropDown buttonText={button1} items={academic} baseUrl="map"/> 
                     </div>
                     <div className="drop-down-btn2">
-                        <DropDown buttonText={button2} items={non_academic}/>
+                        <DropDown buttonText={button2} items={non_academic} baseUrl="map"/>
                     </div>
                 </div>
             </div>

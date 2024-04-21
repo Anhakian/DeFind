@@ -16,6 +16,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route index={true} path="/" element={<App />} />
         <Route index={false} path="/about" element={<About />} />
         <Route index={false} path="/contribute" element={<Contribute />} />
+        <Route index={false} path="/contribute/:building" element={<Contribute />} />
         <Route index={false} path="/resources" element={<Resources />} />
         <Route index={false} path="/map/:building" element={<MapView />} />
         <Route index={false} path="/resources" element={<Resources />} />
