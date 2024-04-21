@@ -59,12 +59,45 @@ const MapComponent = () => {
         return <div>Loading...</div>;
     }
 
+    const findCoords = (building) => {
+        let coords = { lat: 0, lng: 0 };
+        switch (building) {
+            case 'Roy':
+                coords = { lat: 39.64083714045813, lng: -86.86383189084128 };
+                return coords;
+
+            case 'Julian':
+                coords = { lat: 39.6385157522859, lng: -86.86331682472607 };
+                return coords;
+
+            case 'GCPA':
+                coords = { lat: 39.63791543297591, lng: -86.86170944284544 };
+                return coords;
+
+            case 'Lucy':
+                coords = { lat: 39.63928281072111, lng: -86.86008670645705 };
+                return coords;
+
+            case 'Hoover':
+                coords = {lat: 39.639488223587335, lng: -86.8621449549798};
+                return coords;
+
+            case 'Mason':
+                coords = {lat: 39.639752606922414, lng: -86.8599696835164};
+                return coords;
+
+            default:
+                coords = {lat: 39.63961948719088, lng: -86.86339118772831 };
+                return coords;
+        }
+    }
+
     return (
         <div>
             <GoogleMap
-                center={{ lat: 0, lng: 0 }}
-                zoom={4}
-                mapContainerStyle={{ width: '50%', height: '1000px' }}
+                center={findCoords(building)}
+                zoom={19}
+                mapContainerStyle={{ width: '50%', height: '800px' }}
             >
                 {markers.map(marker => (
                     <Marker
