@@ -1,14 +1,17 @@
 import ListGroup from 'react-bootstrap/ListGroup';
 
-const FeatureList = ({ features }) => {
+const FeatureList = () => {
   return (
     <ListGroup>
-      {features.map((feature, index) => (
-        <ListGroup.Item key={index}>
-          {feature.text}
-          {feature.icon && <img className="access-icon" src={feature.icon} alt="icon" />}
+        <ListGroup.Item>
+          <ListGroup.Item>Cras justo odio</ListGroup.Item>
+          <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
+          <ListGroup.Item>Morbi leo risus</ListGroup.Item>
+          <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
+          <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
+          {/* {feature.text}
+          {feature.icon && <img className="access-icon" src={feature.icon} alt="icon" />} */}
         </ListGroup.Item>
-      ))}
     </ListGroup>
   );
 }

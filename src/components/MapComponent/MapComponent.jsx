@@ -93,11 +93,11 @@ const MapComponent = () => {
     }
 
     return (
-        <div>
+        <div className='map'>
             <GoogleMap
                 center={findCoords(building)}
-                zoom={19}
-                mapContainerStyle={{ width: '50%', height: '800px' }}
+                zoom={20}
+                mapContainerStyle={{ width: '45%', height: '500px' }}
             >
                 {markers.map(marker => (
                     <Marker
