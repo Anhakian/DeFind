@@ -9,6 +9,7 @@ const MapComponent = () => {
     const [markers, setMarkers] = useState([]);
     const [mapLoaded, setMapLoaded] = useState(false);
     const [hoveredMarker, setHoveredMarker] = useState(null); // Track hovered marker
+    const [clickedPositions, setClickedPositions] = useState([]);
     const API_KEY = import.meta.env.VITE_API_KEY;
 
     useEffect(() => {
@@ -54,7 +55,8 @@ const MapComponent = () => {
                 return {
                     id: doc.id,
                     position: position,
-                    description: data.description
+                    description: data.description,
+                    type: data.type
                 };
             });
             return markersData;
@@ -102,23 +104,56 @@ const MapComponent = () => {
         }
     };
 
+    const getMarkerIcon = (type) => {
+        switch (type) {
+            case "elevator":
+                return { url: `../../src/assets/markers/Elevator icon.png`, scaledSize: new window.google.maps.Size(50, 50) };
+            case "automatic door":
+                return { url: `../../src/assets/markers/AutomaticDoor.png`, scaledSize: new window.google.maps.Size(50, 50) };
+            case "ramp":
+                return { url: `../../src/assets/markers/Ramp icon.png`, scaledSize: new window.google.maps.Size(50, 50) };
+            default:
+                return null;
+        }
+    }
+    
+
     return (
-        <div>
+        <div> 
             <GoogleMap
                 center={findCoords(building)}
                 zoom={19}
                 mapContainerStyle={{ width: '50%', height: '800px' }}
+                onClick={(event) => {
+                    const latLng = {
+                        lat: event.latLng.lat(),
+                        lng: event.latLng.lng()
+                    };
+                    console.log('Clicked position:', latLng);
+                    setClickedPositions(prev => [...prev, latLng]); // Store clicked position
+                }}
             >
+                {/* Display InfoWindow for each clicked position */}
+                {clickedPositions.map((position, index) => (
+                    <InfoWindow key={index} position={position}>
+                        <div>
+                            <div>Latitude: {position.lat}</div>
+                            <div>Longitude: {position.lng}</div>
+                        </div>
+                    </InfoWindow>
+                ))}
+                {/* Display markers for each database marker */}
                 {markers.map(marker => (
                     <Marker
                         key={marker.id}
                         position={marker.position}
                         onMouseOver={() => setHoveredMarker(marker)}
                         onMouseOut={() => setHoveredMarker(null)}
+                        icon={getMarkerIcon(marker.type)}
                     >
                         {hoveredMarker === marker && ( 
                             <InfoWindow position={marker.position}>
-                                <div>{marker.description}</div>
+                                <div>Description: {marker.description}</div>
                             </InfoWindow>
                         )}
                     </Marker>
