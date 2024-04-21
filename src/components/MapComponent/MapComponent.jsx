@@ -64,7 +64,7 @@ const MapComponent = () => {
             <GoogleMap
                 center={{ lat: 0, lng: 0 }}
                 zoom={4}
-                mapContainerStyle={{ width: '50%', height: '1000px' }}
+                mapContainerStyle={{ width: '70%', height: '700px' }}
             >
                 {markers.map(marker => (
                     <Marker
