@@ -21,10 +21,10 @@ const HomepageIntro = () => {
                 <h1><strong>DeFind</strong></h1>
                 <p><h2>Find the accessibility options<br /> you need</h2></p>
                 <div className="dropdown-container">
-                    <div className="drop-down-btn1">
+                    <div className="drop-down-btn1" style={{ marginLeft: "0px" }}>
                         <DropDown buttonText={button1} items={academic} baseUrl="map"/> 
                     </div>
-                    <div className="drop-down-btn2">
+                    <div className="drop-down-btn2" style={{ marginLeft: "0px" }}>
                         <DropDown buttonText={button2} items={non_academic} baseUrl="map"/>
                     </div>
                 </div>
