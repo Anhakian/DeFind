@@ -3,6 +3,7 @@ import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
 import { GoogleMap, Marker, InfoWindow } from '@react-google-maps/api';
 import { useParams } from 'react-router-dom';
+import './MapComponent.css'
 
 const MapComponent = () => {
     const { building } = useParams();
@@ -106,8 +107,8 @@ const MapComponent = () => {
         <div className='map'>
             <GoogleMap
                 center={findCoords(building)}
-                zoom={20}
-                mapContainerStyle={{ width: '45%', height: '500px' }}
+                zoom={19}
+                mapContainerStyle={{ width: '100%', height: '500px' }}
             >
                 {markers.map(marker => (
                     <Marker

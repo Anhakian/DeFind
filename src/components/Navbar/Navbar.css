@@ -4,7 +4,7 @@ body {
 }
 
 .navbar {
-    position: fixed;
+    position: static;
     background-color: none;
     width: 100%;
 }
@@ -29,7 +29,7 @@ body {
 
 .title a {
     text-decoration: none;
-    color: rgb(137, 187, 254);
+    color: #4E87D5;
 }
 
 .title a:hover {
@@ -56,8 +56,8 @@ body {
 }
 
 .nav-button a:hover {
-    border-bottom-color: rgb(137, 187, 254);
-    color: rgb(137, 187, 254);
+    border-bottom-color: #74A8EF;
+    color: #74A8EF;
 }
 
 li {

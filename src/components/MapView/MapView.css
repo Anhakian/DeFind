@@ -1,4 +1,23 @@
-.map {
-    display: flex; 
-    margin-left: auto;
+.navbar {
+    top: 0; 
+}
+
+.mapView {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.mapContainer { /* This will make the map container take up the available space */
+    margin-top: 100px; /* Move the map container closer to the top */
+    margin-left: 200px; /* Move the map container to the right */
+    width: 500px;
+}
+
+.featureList { /* This will make the feature list container take up the available space */
+    margin-top: 150px; /* Move the feature list container closer to the top */
+    margin-left: 1000px; /* Move the feature list container to the left */
+    width: 200px; 
+    display:inline-block;
 }

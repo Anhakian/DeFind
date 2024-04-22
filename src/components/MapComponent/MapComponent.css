@@ -1,5 +1,4 @@
-GoogleMap {
-   display: flex; 
-   top: 100px; 
-   left: 700px;
+.map {
+    width: 500px;
+    border: violet;
 }

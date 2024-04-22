@@ -1,12 +1,16 @@
 import Navbar from "../Navbar/Navbar";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import './Form.css'
+import './submitForm.css'
+import MapComponent from "../MapComponent/MapComponent";
+import { useParams } from "react-router-dom";
 
-const Resources = () => {
+const submitForm = () => {
+    const { building } = useParams();
     return (
         <div>
             <Navbar />
+            <div>
                 <div className="form">
                     <div className="form-title">
                         <h2><strong>New Accessibility Information Form</strong></h2>
@@ -37,19 +41,19 @@ const Resources = () => {
                                     <Form.Control as="textarea" rows={3} placeholder="Enter descriptions..." />
                                 </Form.Group>
 
-                                <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                                    <Form.Check type="checkbox" label="Check me out" />
-                                </Form.Group>
+                                <div className='map'>
+        
+                                </div>
                                 <Button variant="primary" type="submit">
                                     Submit
                                 </Button>
                             </Form>
-                        </div>
-                        
+                        </div>        
                     </div>
-                   
                 </div>
+            </div>
+                
         </div>
     )
 }
-export default Resources
+export default submitForm

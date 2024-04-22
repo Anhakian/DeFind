@@ -1,5 +1,6 @@
 import Navbar from "../Navbar/Navbar";
 import DropDown from '../DropDown/DropDown';
+import submitForm from '../SubmitForm/submitForm';
 import './Contribute.css'
 const Contribute = () => {
     const button1 = "Academic Buildings";

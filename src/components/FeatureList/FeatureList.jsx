@@ -2,7 +2,7 @@ import ListGroup from 'react-bootstrap/ListGroup';
 
 const FeatureList = () => {
   return (
-    <ListGroup>
+    <ListGroup className="listGroup">
         <ListGroup.Item>
           <ListGroup.Item>Cras justo odio</ListGroup.Item>
           <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
