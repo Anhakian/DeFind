@@ -7,21 +7,25 @@
     justify-content: space-between;
     align-items: flex-start; /* Align items at the start of the flex container vertically */
     max-width: 80%;
-    margin-top: 50px;
+    margin-top: 5px;
     margin-left: 150px;
 }
 
 .mapContainer {
     flex: 1; /* This will make the map container take up the available space */
+    margin-left: 0px;
 }
 
 .list {
-    max-width: 50%;
+    max-width: 100%;
     margin-left: 20px; /* Adjust the margin as needed */
+    margin-top: 45px
 }
 
 .display {
-    font-size: 2vw;
+    font-size: medium;
+    margin-top: 20px;
+    margin-left: 30px;
 }
 
 .dropdown {
@@ -30,10 +34,16 @@
     align-items: center; 
     justify-content: left;
     margin-top: 2%;
-    margin-left: 3%;
+    margin-left: 3%px;
 }
 
-.drop-down-btn1,
-.drop-down-btn2 {
-    margin-left: 20%; /* Adjust the vertical spacing between the buttons */
+.drop-down-btn5 {
+    display: flex; 
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top:0px; 
+}
+.drop-down-btn6 {
+    display: flex; 
+    padding-top:0px; /* Adjust the vertical spacing between the buttons */
 }

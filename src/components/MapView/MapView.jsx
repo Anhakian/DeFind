@@ -25,22 +25,25 @@ const MapView = () => {
             <div className='mapView'>
                 <div className='mapContainer'>
                     <MapComponent />
+                    <p className='display'><h2>Find the accessibility options in other buildings</h2></p>
+                    <div className='dropdown'>
+                            
+                            <div className="dropdown-container">
+                                <div className="drop-down-btn5">
+                                    <DropDown buttonText={button1} items={academic} baseUrl="map"/> 
+                                </div>
+                                <div className="drop-down-btn6">
+                                    <DropDown buttonText={button2} items={non_academic} baseUrl="map"/>
+                                </div>
+                            </div>
+                        </div>
                 </div>
                 <div className='list'>
-                    <FeatureList className='featureList'/>
+                        <FeatureList className='featureList'/>
                 </div>
+                
             </div>
-            <div className='dropdown'>
-                <p className='display'><h2>Find the accessibility options in other buildings</h2></p>
-                <div className="dropdown-container">
-                    <div className="drop-down-btn1">
-                        <DropDown buttonText={button1} items={academic} baseUrl="map"/> 
-                    </div>
-                    <div className="drop-down-btn2">
-                        <DropDown buttonText={button2} items={non_academic} baseUrl="map"/>
-                    </div>
-                </div>
-            </div>
+            
         </div>
     )
 }
