@@ -117,7 +117,7 @@ const MapComponent = ({ handleMapClick , clickedPosition = null}) => {
         <div> 
             <GoogleMap
                 center={findCoords(building)}
-                zoom={19}
+                zoom={18}
                 mapContainerStyle={{ width: '100%', height: '400px' }}
                 onClick={handleMapClick || defaultHandleMapClick}
             >

@@ -7,21 +7,17 @@
     flex: 1;
     margin-top: 220px;
     align-items: center;
-    margin-left: 170px;
+    margin-left: 150px;
 }
 
 .drop-down-btn1 {
     flex: 1;
-    display: flex; 
     display:inline-block;
-    padding-right: 30px;
     padding-top:20px;
-
 }
 
 .drop-down-btn2 {
     flex: 1;
-    display: flex; 
     display:inline-block;
     padding-top:20px;
 }

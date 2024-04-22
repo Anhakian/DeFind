@@ -6,7 +6,7 @@ body {
 .navbar {
     position: static;
     background-color: none;
-    width: 100%;
+    max-width: 100%;
 }
 
 .all-nav-button {

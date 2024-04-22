@@ -1,24 +1,39 @@
-.navbar {
-    top: 0; 
+.MapView {
+    max-width: 100%;
 }
 
 .mapView {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    width: 100%;
+    align-items: flex-start; /* Align items at the start of the flex container vertically */
+    max-width: 80%;
+    margin-top: 50px;
+    margin-left: 150px;
 }
 
-.mapContainer { /* This will make the map container take up the available space */
-    margin-top: 100px; /* Move the map container closer to the top */
-    margin-left:150px; /* Move the map container to the right */
-    width: 800px;
+.mapContainer {
+    flex: 1; /* This will make the map container take up the available space */
 }
 
-.featureList { /* This will make the feature list container take up the available space */
-     /* Move the feature list container closer to the top */
-    margin-left: 700px; /* Move the feature list container to the left */
-    width: 200px; 
-    display:inline-block;
-    width: 200px;
+.list {
+    max-width: 50%;
+    margin-left: 20px; /* Adjust the margin as needed */
+}
+
+.display {
+    font-size: 2vw;
+}
+
+.dropdown {
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    justify-content: left;
+    margin-top: 2%;
+    margin-left: 3%;
+}
+
+.drop-down-btn1,
+.drop-down-btn2 {
+    margin-left: 20%; /* Adjust the vertical spacing between the buttons */
 }

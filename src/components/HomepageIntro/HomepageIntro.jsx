@@ -5,17 +5,16 @@ import DropDown from '../DropDown/DropDown';
 
 const HomepageIntro = () => {
     const button1 = "Academic Buildings";
-      const button2 = "Non-academic Buildings"
-      const academic = [
-        { text: 'Roy O. West Library', value: 'Roy' },
-        { text: 'Julian', value: 'Julian' },
-        { text: 'GCPA', value: 'GCPA' } ];
-  
-      const non_academic = [
-        { text: 'Lucy Rowland Hall', value: 'Lucy' },
-        { text: 'Hoover Dining Hall', value: 'Hoover' },
-        { text: 'Mason Hall', value: 'Mason' }
-      ];
+    const button2 = "Non-academic Buildings"
+    const academic = [
+    { text: 'Roy O. West Library', value: 'Roy' },
+    { text: 'Julian', value: 'Julian' },
+    { text: 'GCPA', value: 'GCPA' } ];
+
+    const non_academic = [
+    { text: 'Hoover Dining Hall', value: 'Hoover' },
+    { text: 'Mason Hall', value: 'Mason' }
+    ];
     return (
         <div className='homepage-intro' id = "homepage-intro">
             <div className='homepage-title'>
