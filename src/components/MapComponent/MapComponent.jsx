@@ -5,12 +5,12 @@ import { GoogleMap, Marker, InfoWindow } from '@react-google-maps/api';
 import { useParams } from 'react-router-dom';
 import './MapComponent.css'
 
-const MapComponent = () => {
+const MapComponent = ({ handleMapClick , clickedPosition = null}) => {
     const { building } = useParams();
     const [markers, setMarkers] = useState([]);
     const [mapLoaded, setMapLoaded] = useState(false);
     const [hoveredMarker, setHoveredMarker] = useState(null); // Track hovered marker
-    const [clickedPositions, setClickedPositions] = useState([]);
+    
     const API_KEY = import.meta.env.VITE_API_KEY;
 
     useEffect(() => {
@@ -30,19 +30,6 @@ const MapComponent = () => {
     }, [API_KEY]);
 
     useEffect(() => {
-        const firebaseConfig = {
-            apiKey: API_KEY,
-            authDomain: "defind-1972f.firebaseapp.com",
-            projectId: "defind",
-            storageBucket: "defind.appspot.com",
-            messagingSenderId: "87769990736",
-            appId: "1:87769990736:web:97d09c7c38c966623b7355"
-        };
-
-        if (!firebase.apps.length) {
-            firebase.initializeApp(firebaseConfig);
-        }
-
         const fetchMarkers = async () => {
             const db = firebase.firestore();
             const markersRef = db.collection('markers');
@@ -117,32 +104,32 @@ const MapComponent = () => {
                 return null;
         }
     }
-    
 
+    const defaultHandleMapClick = (event) => {
+        const latLng = {
+            lat: event.latLng.lat(),
+            lng: event.latLng.lng()
+        };
+        setClickedPosition(latLng); // Store clicked position
+    };
+    
     return (
         <div> 
             <GoogleMap
                 center={findCoords(building)}
                 zoom={19}
-                mapContainerStyle={{ width: '100%', height: '800px' }}
-                onClick={(event) => {
-                    const latLng = {
-                        lat: event.latLng.lat(),
-                        lng: event.latLng.lng()
-                    };
-                    console.log('Clicked position:', latLng);
-                    setClickedPositions(prev => [...prev, latLng]); // Store clicked position
-                }}
+                mapContainerStyle={{ width: '100%', height: '400px' }}
+                onClick={handleMapClick || defaultHandleMapClick}
             >
                 {/* Display InfoWindow for each clicked position */}
-                {clickedPositions.map((position, index) => (
-                    <InfoWindow key={index} position={position}>
+                {clickedPosition && (
+                    <InfoWindow position={clickedPosition}>
                         <div>
-                            <div>Latitude: {position.lat}</div>
-                            <div>Longitude: {position.lng}</div>
+                            <div>Latitude: {clickedPosition.lat}</div>
+                            <div>Longitude: {clickedPosition.lng}</div>
                         </div>
                     </InfoWindow>
-                ))}
+                )}
                 {/* Display markers for each database marker */}
                 {markers.map(marker => (
                     <Marker
