@@ -2,10 +2,12 @@ import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
 import './HomepageImage.css'
 
+
 const HomepageImage = () => {
   return (
     <div className="homepage-box">
         <div className='text-end'>
+           
             <div className="img">
               <Container className='homepage-img-container'>
                   <Image   
