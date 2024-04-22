@@ -1,4 +1,4 @@
-       ### DeFind: Defining an accessible and inclusive campus
+       ** DeFind: Defining an accessible and inclusive campus **
 
 DePauw University campus, as we know, is very big and consists of 36 buildings spreading across 695 acres. Therefore, navigating through the campus can be challenging, especially for people with physical disabilities. While DePauw does make an effort to make its infrastructure accommodating to those with disabilities, these features might not be obvious or easy to find, resulting in difficulties getting around campus. Many students have reported having difficulty finding accommodations for their needs on campus.   
 
