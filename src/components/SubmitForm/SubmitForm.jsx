@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useParams } from "react-router-dom";
+import 'firebase/compat/firestore';
+import './SubmitForm.css';
 import Navbar from "../Navbar/Navbar";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import './SubmitForm.css';
 import MapComponent from "../MapComponent/MapComponent"; 
-import { useParams } from "react-router-dom";
 import firebase from 'firebase/compat/app';
-import 'firebase/compat/firestore';
 
 const db = firebase.firestore();
 
@@ -31,6 +31,17 @@ const SubmitForm = () => {
         setLongitude(latLng.lng);
         setClickedPosition(latLng)
     }
+    
+    useEffect(() => {
+        if (description === '' && (accessibilityOption === 'elevator' || accessibilityOption === 'automatic door')) {
+            setDescription(`This is an ${accessibilityOption}`);
+        }
+
+        else if (description === '' &&  accessibilityOption !== '') {
+            setDescription(`This is a ${accessibilityOption}`)
+        }
+
+    }, [accessibilityOption, description]);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -40,14 +51,10 @@ const SubmitForm = () => {
             alert('You need to click on the position of the accessibility feature on the map');
             return;
         }
-
+        
         if (accessibilityOption === '') {
             alert('Accessibility type is required');
             return;
-        }
-
-        if (description === '') {
-            setDescription(`This is ${accessibilityOption === 'elevator' ? 'an elevator' : `a ${accessibilityOption}`}`);
         }
 
         try {
