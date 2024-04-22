@@ -10,12 +10,10 @@ const MapView = () => {
     return (
         <div>
             <Navbar className='navbar' />
-        <div className='MapView'>
             <div className='mapContainer'>
                 <MapComponent />
             </div>
                 <FeatureList className='featureList'/>
-        </div>
         </div>
     )
 }

@@ -124,7 +124,7 @@ const MapComponent = () => {
             <GoogleMap
                 center={findCoords(building)}
                 zoom={19}
-                mapContainerStyle={{ width: '50%', height: '800px' }}
+                mapContainerStyle={{ width: '100%', height: '800px' }}
                 onClick={(event) => {
                     const latLng = {
                         lat: event.latLng.lat(),
