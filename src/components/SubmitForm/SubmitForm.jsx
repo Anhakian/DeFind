@@ -86,6 +86,7 @@ const SubmitForm = () => {
         <div>
             <Navbar />
             <div>
+                
                 <div className="form">
                     <div className="form-title">
                         <h2><strong>New Accessibility Information Form</strong></h2>
@@ -111,11 +112,15 @@ const SubmitForm = () => {
                                     <MapComponent handleMapClick={handleMapClick} clickedPosition={clickedPosition}/>
                                 </div>
 
-                                <Button variant="primary" type="submit">
-                                    Submit
-                                </Button>
+                                <div className='formBtn'>
+                                    <Button variant="primary" type="submit">
+                                        Submit
+                                    </Button>
+                                </div>
+                                
                             </Form>
                         </div>
+                        
                     </div>
                 </div>
             </div>
