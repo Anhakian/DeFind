@@ -1,8 +1,4 @@
-# React + Vite
+        **DeFind: Defining an accessible and inclusive campus** 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+    DePauw University campus, as we know, is very big and consists of 36 buildings spreading across 695 acres. Therefore, navigating through the campus can be challenging, especially for people with physical disabilities. While DePauw does make an effort to make its infrastructure accommodating to those with disabilities, these features might not be obvious or easy to find, resulting in difficulties getting around campus. Many students have reported having difficulty finding accommodations for their needs on campus. 
+    To address this issue, we propose DeFind – a web application that helps navigate the available accessibility features at DePauw. DeFind aims to provide a comprehensive map of DePauw’s accessibility options. DeFind shows markers for three key amenities: elevators, ramps, and automatic doors. Each marker represents the relative location of the feature in the building and comes with a brief description of the feature and possibly pictures. Due to the big scope of DeFind, we hope to count on the DePauw community to contribute to our accessibility information database. When accessing DeFind, users will be able to choose the building they want to learn more about and click on a marker in the form of a relevant icon to get more information. They can also be a contributor and submit information to add another accessibility feature to the map. With DeFind, we hope to make the DePauw campus more accessible to everyone, and with the crowdsourcing nature, we hope to remind the DePauw community to always look out for one another. 
