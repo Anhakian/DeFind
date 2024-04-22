@@ -24,3 +24,10 @@
     margin-top: 20px;
     margin-bottom: 30px;
 }
+
+.submitBtn {
+    background-color: #89BBFE;
+    color: #263C68;
+    font-weight: bold;
+    display: block;
+}

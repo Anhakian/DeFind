@@ -32,17 +32,6 @@ const SubmitForm = () => {
         setClickedPosition(latLng)
     }
     
-    useEffect(() => {
-        if (description === '' && (accessibilityOption === 'elevator' || accessibilityOption === 'automatic door')) {
-            setDescription(`This is an ${accessibilityOption}`);
-        }
-
-        else if (description === '' &&  accessibilityOption !== '') {
-            setDescription(`This is a ${accessibilityOption}`)
-        }
-
-    }, [accessibilityOption, description]);
-
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -54,6 +43,11 @@ const SubmitForm = () => {
         
         if (accessibilityOption === '') {
             alert('Accessibility type is required');
+            return;
+        }
+
+        if (description === '') {
+            alert('Description is required');
             return;
         }
 
@@ -113,7 +107,7 @@ const SubmitForm = () => {
                                 </div>
 
                                 <div className='formBtn'>
-                                    <Button variant="primary" type="submit">
+                                    <Button variant="primary" type="submit" className='submitBtn'>
                                         Submit
                                     </Button>
                                 </div>
