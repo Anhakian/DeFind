@@ -1,7 +1,7 @@
 import Navbar from "../Navbar/Navbar";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import './submitForm.css'
+import './SubmitForm.css'
 import MapComponent from "../MapComponent/MapComponent";
 import { useParams } from "react-router-dom";
 
