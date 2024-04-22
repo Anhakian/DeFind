@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css'
 import App from './App.jsx'
 import About from './components/About/About.jsx'
 import Contribute from './components/Contribute/Contribute.jsx';
