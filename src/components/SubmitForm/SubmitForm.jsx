@@ -23,7 +23,7 @@ const SubmitForm = () => {
             lat: event.latLng.lat(),
             lng: event.latLng.lng()
         };
-        
+
 
         console.log(event)
         console.log("Latitude:", latLng.lat, "Longitude:", latLng.lng);
@@ -34,7 +34,7 @@ const SubmitForm = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-    
+
         // Validate latitude and longitude
         if (latitude === '' || longitude === '') {
             alert('You need to click on the position of the accessibility feature on the map');
@@ -49,14 +49,14 @@ const SubmitForm = () => {
         if (description === '') {
             setDescription(`This is ${accessibilityOption === 'elevator' ? 'an elevator' : `a ${accessibilityOption}`}`);
         }
-    
+
         try {
             // Check if latitude and longitude are valid numbers
             if (isNaN(latitude) || isNaN(longitude)) {
                 console.error('Latitude or longitude is not a valid number');
                 return;
             }
-    
+
             // Add data to Firestore
             await db.collection('markers').add({
                 building: building,
@@ -64,7 +64,7 @@ const SubmitForm = () => {
                 type: accessibilityOption,
                 description: description,
             });
-    
+
             // Reset form fields
             setLatitude('');
             setLongitude('');
